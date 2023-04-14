@@ -49,6 +49,9 @@ public class Monster : MonoBehaviour
         if (collision.contacts[0].normal.y < -0.5)
             return true;
 
+        if (collision.relativeVelocity.magnitude > 5f)
+            return true;
+
         return false;
     }
 

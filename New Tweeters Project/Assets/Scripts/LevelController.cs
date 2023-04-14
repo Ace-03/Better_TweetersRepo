@@ -24,7 +24,12 @@ public class LevelController : MonoBehaviour
 
     void GoToNextLevel()
     {
-        Debug.Log("Go to Level" + _nextLevelName);
+        Debug.Log("Go to " + _nextLevelName);
+        SceneManager.LoadScene(_nextLevelName);
+    }
+
+    public void StartGame()
+    {
         SceneManager.LoadScene(_nextLevelName);
     }
 
